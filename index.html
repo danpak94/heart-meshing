@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Our algorithms generate patient-specific models for computational and bencthop simulations from medical images.">
+  <meta name="keywords" content="heart, cardiac, meshing, digital twins, biomechanics, simulations, fast, automated, DeepCarve, C-MAC, deep learning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fast automated meshing for cardiac digital twins</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">Fast automated meshing for cardiac digital twins</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><p>Lead author: Daniel H. Pak</p></span>
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/danpak94/Deep-Cardiac-Volumetric-Mesh"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://scholar.google.com/citations?user=461FI88AAAAJ&hl=en&authuser=1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-graduation-cap"></i>
+                  </span>
+                  <span>Google scholar</span>
+                  </a>
+              </span>
+
+              <span class="link-block">
+                <a href="mailto:daniel.pak@yale.edu"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-envelope"></i>
+                  </span>
+                  <span>Email</span>
+                  </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://www.linkedin.com/in/daniel-pak-0546511a2/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-linkedin"></i>
+                  </span>
+                  <span>LinkedIn</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light teaser">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-4"> Meshing calcified hearts </h2>
+      <div class="content">
+        <p style="font-size:1.2rem"> <span class="dnerf">DeepCarve</span> (<em>1 second</em> ): Heart tissue, surface + volume meshes </p>
+        <p style="font-size:1.2rem"> <span class="dnerf">C-MAC</span> (<em>1 minute</em> ): Calcification, add volume meshes with exact conforming surfaces to existing meshes </p>
+        <video id="teaser-deepcarve" autoplay muted loop playsinline height="100%">
+          <source src="./static/videos/teaser_deepcarve.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- right arrow code &#x2192 -->
+<section class="section less-padding-bottom">
+  <div class="container is-max-desktop">
+    <h2 class="title is-4">Verified simulations</h2>
+    <div class="content">
+      <p style="font-size:1.2rem"> Special thanks to 
+        <a href="https://scholar.google.com/citations?user=5PPa1lwAAAAJ&hl=en">Minliang Liu</a> and 
+        <a href=https://scholar.google.com/citations?user=RpKJ5h8AAAAJ&hl=en>Caglar Ozturk</a> for the Abaqus simulations! </p>
+    </div>
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <div class="content">
+          <img src="./static/images/abaqus_solid.png"
+                  class="interpolation-image"
+                  alt="Abaqus solid results snippet"/>
+        </div>
+        <!-- <div class="content">
+          <video id="teaser-deepcarve" controls muted playsinline height="100%">
+            <source src="./static/videos/abaqus_solid.mp4" type="video/mp4">
+          </video>
+        </div> -->
+        <p style="font-size:1.2rem"> Abaqus solid mechanics </p>
+      </div>
+      
+      <div class="column has-text-centered">
+        <div class="content">
+          <img src="./static/images/abaqus_fsi.png"
+                  class="interpolation-image"
+                  alt="Abaqus FSI results snippet"/>
+        </div>
+        <!-- <div class="content">
+          <video id="teaser-deepcarve" controls muted playsinline object-fit="fill">
+            <source src="./static/videos/abaqus_fsi.mp4" type="video/mp4">
+          </video>
+        </div> -->
+        <p style="font-size:1.2rem"> Abaqus fluid-structure interaction </p>
+      </div>
+
+      <div class="column has-text-centered">
+        <!-- <div class="content">
+          <img src="./static/images/omniverse.png"
+                  class="interpolation-image"
+                  alt="Omniverse results snippet"/>
+        </div> -->
+        <div class="content">
+          <video id="teaser-deepcarve" controls muted playsinline height="100%">
+            <source src="./static/videos/omniverse_tavr.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p style="font-size:1.2rem"> NVIDIA Omniverse (real-time) </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section less-padding-bottom">
+  <div class="container is-max-desktop">
+    <div class="columns has-text-justified">
+      <div class="column">
+        <h2 class="title is-4">3D printing &amp soft robotics</h2>
+        <div class="content">
+          <p style="font-size:1.2rem"> Special thanks to 
+            <a href="https://scholar.google.com/citations?user=RpKJ5h8AAAAJ&hl=en">Caglar Ozturk</a>, 
+            <a href="https://scholar.google.com/citations?user=H_4uh-cAAAAJ">Luca Rosalia</a>,  
+            <a href="https://scholar.google.com/citations?user=A0eCNdYAAAAJ">Debkalpa Goswami</a>, and
+            <a href="https://www.linkedin.com/in/mary-robakowski/">Mary E. Robakowski</a> for the physical models!
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/3d_printing.png" class="interpolation-image" alt="3D printing snippet"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-4">Collaborators</h2>
+    <div class="content has-text-justified">
+      <p style="font-size:1.2rem"> This work would not have been possible without our amazing collaborators </p>
+      <p style="font-size:1.2rem"> Minliang Liu, Caglar Ozturk, Theodore Kim, Luca Rosalia, Debkalpa Goswami, Andres Caballero, Shawn S. Ahn, Yilin Xu, Mary E. Robakowski, John Onofrey, Liang Liang, Raymond McKay, Christopher Nguyen, Ellen T. Roche, Wei Sun, Rudolph Gleason, James S. Duncan (main advisor) </p>
+      <p style="font-size:1.2rem"> Yale, Georgia Tech, MIT, Texas Tech University, Hartford Hospital, Cleveland Clinic, University of Miami </p>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-4">What's next for us?</h2>
+      <div class="content has-text-justified">
+        <p style="font-size:1.2rem"> 1. Assisting end users of our system (code available in <a href="https://github.com/danpak94/Deep-Cardiac-Volumetric-Mesh">Github</a>, instructions below) </p>
+        <p style="font-size:1.2rem"> 2. Accelerating solid simulations </p>
+        <p style="font-size:1.2rem"> 3. Improving &amp expanding meshing algorithms (bicuspid AV, mitral, echo, more accurate aorta, etc.) </p>
+        <h2 class="title is-5">Please do not hesitate to <a href="#top">contact us </a> for any related inquiries!</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section less-padding-bottom">
+  <div class="container is-max-desktop">
+    <h2 class="title is-4">Setup</h2>
+    <div class="content has-text-centered">
+      <div class="publication-video">
+        <iframe src="https://www.youtube.com/embed/PACazoYUIMg?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section less-padding-bottom">
+  <div class="container is-max-desktop">
+    <h2 class="title is-4">DeepCarve: full run</h2>
+    <div class="content has-text-centered">
+      <div class="publication-video">
+        <iframe src="https://www.youtube.com/embed/zVcqHYTPCOM?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section less-padding-bottom">
+  <div class="container is-max-desktop">
+    <h2 class="title is-4">C-MAC: full run</h2>
+    <div class="content has-text-centered">
+      <div class="publication-video">
+        <iframe src="https://www.youtube.com/embed/LTkGDokcTJQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section less-padding-bottom" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX: DeepCarve</h2>
+    <pre><code>@article{pak2023patient,
+  title={Patient-specific Heart Geometry Modeling for Solid Biomechanics using Deep Learning},
+  author={Pak, Daniel H and Liu, Minliang and Kim, Theodore and Liang, Liang and Caballero, Andres and Onofrey, John and Ahn, Shawn S and Xu, Yilin and McKay, Raymond and Sun, Wei and others},
+  journal={IEEE transactions on medical imaging},
+  year={2023},
+  publisher={IEEE}
+}
+
+@inproceedings{pak2021distortion,
+  title={Distortion energy for deep learning-based volumetric finite element mesh generation for aortic valves},
+  author={Pak, Daniel H and Liu, Minliang and Kim, Theodore and Liang, Liang and McKay, Raymond and Sun, Wei and Duncan, James S},
+  booktitle={Medical Image Computing and Computer Assisted Intervention--MICCAI 2021: 24th International Conference, Strasbourg, France, September 27--October 1, 2021, Proceedings, Part VI 24},
+  pages={485--494},
+  year={2021},
+  organization={Springer}
+}</code></pre>
+
+  <h2 class="title">BibTeX: C-MAC</h2>
+  <pre><code>coming soon</code></pre>
+
+  <h2 class="title">BibTeX: FSI and 3D printing</h2>
+  <pre><code>coming soon</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://github.com/danpak94/Deep-Cardiac-Volumetric-Mesh" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website was built from the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies template</a>. Sincere gratitude to the original authors for open-sourcing the template.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
