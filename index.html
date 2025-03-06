@@ -126,9 +126,9 @@
         <a href="https://scholar.google.com/citations?user=5PPa1lwAAAAJ&hl=en">Minliang Liu</a> and 
         <a href=https://scholar.google.com/citations?user=RpKJ5h8AAAAJ&hl=en>Caglar Ozturk</a> for the Abaqus simulations! </p>
     </div>
-    <div class="columns is-centered">
-      <div class="column has-text-centered">
-        <div class="content">
+    <div class="columns is-centered is-vcentered">
+      <div class="column has-text-centered is-flex is-flex-direction-column is-align-items-center">
+        <div class="content media-container">
           <img src="./static/images/abaqus_solid.png"
                   class="interpolation-image"
                   alt="Abaqus solid results snippet"/>
@@ -141,8 +141,8 @@
         <p style="font-size:1rem"> Abaqus solid mechanics </p>
       </div>
       
-      <div class="column has-text-centered">
-        <div class="content">
+      <div class="column has-text-centered is-flex is-flex-direction-column is-align-items-center">
+        <div class="content media-container">
           <img src="./static/images/abaqus_fsi.png"
                   class="interpolation-image"
                   alt="Abaqus FSI results snippet"/>
@@ -155,18 +155,18 @@
         <p style="font-size:1rem"> Abaqus fluid-structure interaction </p>
       </div>
 
-      <div class="column has-text-centered">
+      <div class="column has-text-centered is-flex is-flex-direction-column is-align-items-center">
         <!-- <div class="content">
           <img src="./static/images/omniverse.png"
                   class="interpolation-image"
                   alt="Omniverse results snippet"/>
         </div> -->
-        <div class="content">
+        <div class="content media-container">
           <video id="teaser-deepcarve" controls muted playsinline height="100%">
-            <source src="./static/videos/omniverse_tavr.mp4" type="video/mp4">
+            <source src="./static/videos/physics-sim.mp4" type="video/mp4">
           </video>
         </div>
-        <p style="font-size:1rem"> NVIDIA Omniverse (real-time) </p>
+        <p style="font-size:1rem"> Custom simulation + NVIDIA Omniverse </p>
       </div>
     </div>
   </div>
@@ -255,9 +255,12 @@
   <div class="container is-max-desktop content">
     <h2 class="title is-5">BibTeX: DeepCarve</h2>
     <pre><code>@article{pak2023patient,
-  title={Patient-specific Heart Geometry Modeling for Solid Biomechanics using Deep Learning},
+  title={Patient-specific heart geometry modeling for solid biomechanics using deep learning},
   author={Pak, Daniel H and Liu, Minliang and Kim, Theodore and Liang, Liang and Caballero, Andres and Onofrey, John and Ahn, Shawn S and Xu, Yilin and McKay, Raymond and Sun, Wei and others},
   journal={IEEE transactions on medical imaging},
+  volume={43},
+  number={1},
+  pages={203--215},
   year={2023},
   publisher={IEEE}
 }
@@ -273,14 +276,27 @@
 
   <h2 class="title is-5">BibTeX: C-MAC</h2>
   <pre><code>@article{pak2024robust,
-  title={Robust automated calcification meshing for biomechanical cardiac digital twins},
+  title={Robust automated calcification meshing for personalized cardiovascular biomechanics},
   author={Pak, Daniel H and Liu, Minliang and Kim, Theodore and Ozturk, Caglar and McKay, Raymond and Roche, Ellen T and Gleason, Rudolph and Duncan, James S},
-  journal={arXiv preprint arXiv:2403.04998},
-  year={2024}
+  journal={NPJ Digital Medicine},
+  volume={7},
+  number={1},
+  pages={213},
+  year={2024},
+  publisher={Nature Publishing Group UK London}
 }</code></pre>
 
   <h2 class="title is-5">BibTeX: FSI and 3D printing</h2>
-  <pre><code>coming soon</code></pre>
+  <pre><code>@article{ozturk2025ai,
+  title={AI-Powered Multimodal Modeling of Personalized Hemodynamics in Aortic Stenosis},
+  author={Ozturk, Caglar and Pak, Daniel H and Rosalia, Luca and Goswami, Debkalpa and Robakowski, Mary E and McKay, Raymond and Nguyen, Christopher T and Duncan, James S and Roche, Ellen T},
+  journal={Advanced Science},
+  volume={12},
+  number={5},
+  pages={2404755},
+  year={2025},
+  publisher={Wiley Online Library}
+}</code></pre>
   </div>
 </section>
 

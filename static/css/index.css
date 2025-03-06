@@ -163,3 +163,23 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+.media-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px; /* Ensure consistent height */
+}
+
+.media-container img,
+.media-container video {
+  max-height: 100%;
+  width: auto; /* Keep aspect ratio */
+}
+
+.text-container {
+  min-height: 40px; /* Ensures all texts are aligned */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
